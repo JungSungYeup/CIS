@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/Ecolor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:id="@+id/layout_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/category_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검색"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/category_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/selector_btn_category" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_category_0"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_text_background"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <EditText
+                android:id="@+id/search_concert_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Search..."
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="@color/Ccolor"
+                android:textCursorDrawable="@null"
+                android:textSize="15dp" />
+
+            <ImageButton
+                android:id="@+id/IB_searchName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:padding="7dp"
+                android:src="@drawable/icon_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_category_1"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/start_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/input_text_background"
+                android:clickable="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="5dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="~"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/end_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_text_background"
+                android:clickable="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="5dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/category1_IB"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:padding="7dp"
+                android:src="@drawable/icon_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_category_2"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/category_subcode_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:text="장르를 선택해 주세요."
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/category_subcode_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:padding="2dp"
+                android:src="@drawable/selector_btn_category" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_1"
+        />
+    </RelativeLayout>
+
+
+
+</FrameLayout>
